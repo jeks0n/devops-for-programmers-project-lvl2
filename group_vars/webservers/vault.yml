@@ -1,0 +1,6 @@
+vault_db_password: l76pYVh1Cpow1j2r
+vault_db_host: db-postgresql-fra1-93005-do-user-7446382-0.b.db.ondigitalocean.com
+vault_db_name: defaultdb
+vault_db_username: doadmin
+vault_db_port: "25060"
+vault_datadog_api_key: "994419f05cb9c49678dd99c76e1c3785"

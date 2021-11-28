@@ -1,0 +1,18 @@
+ansible_user: root
+app_port    : "3000"
+db_password : "{{ vault_db_password }}"
+db_host     : "{{ vault_db_host }}"
+db_name     : "{{ vault_db_name }}"
+db_username : "{{ vault_db_username }}"
+db_port     : "{{ vault_db_port }}"
+
+datadog_api_key : "{{ vault_datadog_api_key }}"
+datadog_site: "datadoghq.com"
+datadog_checks:
+  http_check:
+    init_config:
+    instances:
+     - name: Application health check status
+       url: "http://localhost:{{ app_port }}"
+       timeout: 5
+       method: GET
