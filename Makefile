@@ -12,10 +12,10 @@ deploy:
 	ansible-playbook playbook.yml
 
 encrypt-vault:
-	ansible-vault encrypt $(FILE) --vault-password-file vault-password
+	ansible-vault encrypt $(FILE)
 
 decrypt-vault:
-	ansible-vault decrypt $(FILE) --vault-password-file vault-password
+	ansible-vault decrypt $(FILE)
 
 view-vault:
-	ansible-vault view $(FILE) --vault-password-file vault-password
+	ansible-vault view $(FILE)
