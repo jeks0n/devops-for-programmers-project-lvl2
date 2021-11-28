@@ -1,17 +1,4 @@
 ---
-- name: Prepare webservers
-  hosts: all
-  gather_facts: yes
-  tasks:
-    - name: Install packages
-      ansible.builtin.apt:
-        name: python3-pip
-        update_cache: yes
-
-    - name: Install Docker Module for Python
-      ansible.builtin.pip:
-        name: docker
-
-- hosts: webservers
-  roles:
-    - name: datadog.datadog
+- import_playbook: ./playbooks/prepare.yml
+- import_playbook: ./playbooks/monitor.yml
+- import_playbook: ./playbooks/deploy.yml

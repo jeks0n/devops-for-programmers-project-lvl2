@@ -12,6 +12,12 @@ Install collections and roles:
 make install
 ```
 
+## Prepare servers
+Install collections and roles:
+```
+make prepare
+```
+
 ## Check connections
 Ping servers:
 ```
@@ -19,7 +25,18 @@ make ping
 ```
 
 ## Deploy
-Deploy to all servers:
+Deploy App to servers:
 ```
 make deploy
+```
+
+## Monitor
+Set up Datadog:
+```
+make monitor
+```
+## Start
+Run Prepare, Monitor and Deploy:
+```
+make start
 ```

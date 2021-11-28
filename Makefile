@@ -8,7 +8,16 @@ install:
 ping: touch-secret
 	ansible all -m ping
 
-deploy:
+prepare: touch-secret
+	ansible-playbook ./playbooks/prepare.yml
+
+deploy: touch-secret
+	ansible-playbook ./playbooks/deploy.yml
+
+monitor: touch-secret
+	ansible-playbook ./playbooks/monitor.yml
+
+start: touch-secret
 	ansible-playbook playbook.yml
 
 encrypt-vault:
@@ -19,3 +28,6 @@ decrypt-vault:
 
 view-vault:
 	ansible-vault view $(FILE)
+
+edit-vault:
+	ansible-vault edit $(FILE)
