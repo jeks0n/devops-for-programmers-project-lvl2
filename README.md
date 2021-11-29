@@ -3,6 +3,8 @@
 
 Goal: make deploy Docker Compose with Ansible.
 
+App: https://hexlet-project.xyz/
+
 ## Software
 Ansible >= 2.11
 

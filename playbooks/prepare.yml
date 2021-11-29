@@ -11,7 +11,3 @@
     - name: Install Docker Module for Python
       ansible.builtin.pip:
         name: docker
-
-    - name: Install Datatog Module for Python
-      ansible.builtin.pip:
-        name: datadog
