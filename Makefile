@@ -1,23 +1,23 @@
-touch-secret:
-	 [ -f .vault-pass ] || cp .vault-pass.example .vault-pass
+touch-vault-pass:
+	touch .vault-pass
 
 install:
 	ansible-galaxy role install -r requirements.yml
 	ansible-galaxy collection install -r requirements.yml
 
-ping: touch-secret
+ping:
 	ansible all -m ping
 
-prepare: touch-secret
+prepare:
 	ansible-playbook ./playbooks/prepare.yml
 
-deploy: touch-secret
+deploy:
 	ansible-playbook ./playbooks/deploy.yml
 
-monitor: touch-secret
+monitor:
 	ansible-playbook ./playbooks/monitor.yml
 
-start: touch-secret
+start:
 	ansible-playbook playbook.yml
 
 encrypt-vault:

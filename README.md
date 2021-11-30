@@ -7,7 +7,11 @@ App: https://hexlet-project.xyz/
 
 ## Software
 Ansible >= 2.11
-
+## Make secret file
+Fill manually _**./.vault-pass**_ with secret string:
+```
+make touch-vault-pass
+```
 ## Set up
 Install collections and roles:
 ```
